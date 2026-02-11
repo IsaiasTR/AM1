@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Análisis Matemático 1 | Plataforma Académica</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --primary:#0f172a;
+  --secondary:#1e293b;
+  --accent:#2563eb;
+  --light:#f1f5f9;
+  --gray:#64748b;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body{
+  background:var(--light);
+  color:var(--primary);
+  line-height:1.6;
+}
+
+header{
+  background:var(--primary);
+  color:white;
+  padding:20px 50px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+header h1{
+  font-size:20px;
+  font-weight:600;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  margin-left:25px;
+  font-size:14px;
+  transition:0.3s;
+}
+
+nav a:hover{
+  color:var(--accent);
+}
+
+.hero{
+  padding:100px 40px;
+  text-align:center;
+  background:linear-gradient(135deg,#0f172a,#1e40af);
+  color:white;
+}
+
+.hero h2{
+  font-size:40px;
+  margin-bottom:20px;
+}
+
+.hero p{
+  font-size:18px;
+  max-width:700px;
+  margin:0 auto 30px auto;
+  color:#cbd5e1;
+}
+
+.hero button{
+  padding:14px 30px;
+  border:none;
+  border-radius:8px;
+  background:var(--accent);
+  color:white;
+  font-size:16px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.hero button:hover{
+  background:#1d4ed8;
+}
+
+.section{
+  padding:80px 40px;
+  max-width:1200px;
+  margin:auto;
+}
+
+.section h3{
+  text-align:center;
+  font-size:28px;
+  margin-bottom:50px;
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+}
+
+.card{
+  background:white;
+  padding:30px;
+  border-radius:12px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-6px);
+}
+
+.card h4{
+  margin-bottom:15px;
+}
+
+.card p{
+  font-size:14px;
+  color:var(--gray);
+  margin-bottom:20px;
+}
+
+.card a{
+  display:inline-block;
+  padding:10px 18px;
+  background:var(--accent);
+  color:white;
+  text-decoration:none;
+  border-radius:6px;
+  font-size:14px;
+}
+
+footer{
+  background:var(--secondary);
+  color:#cbd5e1;
+  text-align:center;
+  padding:30px;
+  font-size:14px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Análisis Matemático 1</h1>
+  <nav>
+    <a href="#">Inicio</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#modelo">Modelo IA</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>Plataforma Académica Inteligente</h2>
+  <p>
+    Sistema integral para gestión académica, evaluaciones online y modelo predictivo de deserción basado en Machine Learning.
+  </p>
+  <button onclick="window.location.href='#servicios'">
+    Explorar Plataforma
+  </button>
+</section>
+
+<section class="section" id="servicios">
+  <h3>Servicios Disponibles</h3>
+
+  <div class="cards">
+
+    <div class="card">
+      <h4>Registro de Asistencia</h4>
+      <p>Control automatizado de asistencia con cálculo de porcentaje y alertas tempranas.</p>
+      <a href="#">Acceder</a>
+    </div>
+
+    <div class="card">
+      <h4>Control de Asistencia</h4>
+      <p>Consulta individual de asistencias, ausencias y porcentaje acumulado.</p>
+      <a href="#">Consultar</a>
+    </div>
+
+    <div class="card">
+      <h4>Parcialitos Online</h4>
+      <p>Evaluaciones formativas con corrección automática y análisis de desempeño.</p>
+      <a href="#">Ingresar</a>
+    </div>
+
+    <div class="card">
+      <h4>Chatbot Matemático</h4>
+      <p>Resolución guiada de modelos de parciales y ejercicios prácticos.</p>
+      <a href="#">Abrir</a>
+    </div>
+
+    <div class="card">
+      <h4>Modelo Predictivo</h4>
+      <p>Predicción posterior al primer parcial sobre abandono y rendimiento final.</p>
+      <a href="#">Ver Análisis</a>
+    </div>
+
+  </div>
+</section>
+
+<section class="section" id="modelo">
+  <h3>Analítica Académica</h3>
+  <p style="text-align:center; max-width:800px; margin:auto; color:var(--gray);">
+    La plataforma integra modelos de Machine Learning que analizan rendimiento,
+    asistencia y participación para identificar tempranamente riesgo de deserción
+    y proyectar promedio final estimado.
+  </p>
+</section>
+
+<footer>
+  ©  Cátedra Vázquez Magnani | Docente: Isaias Tenorio <br>
+  Plataforma desarrollada con Analítica Educativa e Inteligencia Artificial.
+</footer>
+
+</body>
+</html>
