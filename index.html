@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Análisis Matemático 1 | Cátedra: Vazquez Magnani | Docente: Isaias Tenorio</title>
+<title>Análisis Matemático 1 | Cátedra Vázquez Magnani | Isaias Tenorio</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -66,32 +66,28 @@ nav a:hover{
 }
 
 .hero h2{
-  font-size:42px;
-  margin-bottom:20px;
+  font-size:40px;
+  margin-bottom:15px;
   font-weight:700;
 }
 
-.hero p{
-  font-size:18px;
+.hero-subtitle{
+  font-size:20px;
+  font-weight:500;
+  margin-bottom:20px;
+}
+
+.hero-description{
   max-width:750px;
-  margin:0 auto 35px auto;
+  margin:0 auto;
+  font-size:16px;
   color:#cbd5e1;
 }
 
-.hero button{
-  padding:14px 32px;
-  border:none;
-  border-radius:8px;
-  background:var(--accent);
-  color:white;
-  font-size:16px;
-  cursor:pointer;
-  transition:0.3s;
-}
-
-.hero button:hover{
-  background:#1d4ed8;
-  transform:translateY(-2px);
+.hero-author{
+  margin-top:30px;
+  font-size:14px;
+  color:#94a3b8;
 }
 
 .section{
@@ -127,7 +123,6 @@ nav a:hover{
 .card:nth-child(2){animation-delay:0.2s;}
 .card:nth-child(3){animation-delay:0.3s;}
 .card:nth-child(4){animation-delay:0.4s;}
-.card:nth-child(5){animation-delay:0.5s;}
 
 .card:hover{
   transform:translateY(-8px);
@@ -198,33 +193,31 @@ footer{
 <body>
 
 <header>
-  <h1> Análisis Matemático 1 </h1>
+  <h1>Análisis Matemático 1</h1>
   <nav>
     <a href="#">Inicio</a>
     <a href="#servicios">Servicios</a>
-    <a href="#modelo">Modelo IA</a>
   </nav>
 </header>
 
 <section class="hero">
-  <h2>Cátedra : Vázquez Magnani</h2>
-  
-  <p style="font-size:20px; font-weight:500; margin-bottom:15px;">
-    Análisis Matemático 1 - FCE - UBA
+  <h2>Cátedra Vázquez Magnani</h2>
+
+  <div class="hero-subtitle">
+    Análisis Matemático 1 · FCE · UBA
+  </div>
+
+  <p class="hero-description">
+    Plataforma académica oficial destinada a la gestión integral de la materia,
+    incluyendo registro estudiantil, control de asistencias, evaluaciones formativas
+    y herramientas digitales de apoyo al aprendizaje.
   </p>
 
-  <p style="max-width:750px; margin:0 auto; font-size:16px; color:#cbd5e1;">
-    Plataforma académica oficial desarrollada para la gestión integral de la materia,
-    incluyendo registro de asistencias, control de asistencias, evaluaciones formativas, analítica educativa
-    y modelos predictivos basados en Machine Learning.
-  </p>
-
-  <p style="margin-top:25px; font-size:14px; color:#94a3b8;">
+  <div class="hero-author">
     Diseño, desarrollo e implementación tecnológica a cargo de
     <strong style="color:white;">Isaias Tenorio</strong>.
-  </p>
+  </div>
 </section>
-
 
 <section class="section" id="servicios">
   <h3>Servicios Disponibles</h3>
@@ -232,54 +225,38 @@ footer{
   <div class="cards">
 
     <div class="card">
+      <i class="fa-solid fa-id-card"></i>
+      <h4>Registro Estudiantil</h4>
+      <p>Consulta personalizada del estado académico y seguimiento del cursado.</p>
+      <a href="#">Ingresar</a>
+    </div>
+
+    <div class="card">
       <i class="fa-solid fa-user-check"></i>
       <h4>Registro de Asistencia</h4>
-      <p>Control automatizado con cálculo de porcentaje y alertas tempranas.</p>
+      <p>Registro digital de asistencia con cálculo automático de porcentaje.</p>
       <a href="#">Acceder</a>
     </div>
 
     <div class="card">
       <i class="fa-solid fa-chart-line"></i>
       <h4>Control de Asistencia</h4>
-      <p>Consulta individual de asistencias, ausencias y porcentaje acumulado.</p>
+      <p>Visualización individual de asistencias y ausencias acumuladas.</p>
       <a href="#">Consultar</a>
     </div>
 
     <div class="card">
       <i class="fa-solid fa-file-pen"></i>
       <h4>Parcialitos Online</h4>
-      <p>Evaluaciones formativas con corrección automática y análisis de desempeño.</p>
+      <p>Evaluaciones formativas con corrección automática y seguimiento de desempeño.</p>
       <a href="#">Ingresar</a>
-    </div>
-
-    <div class="card">
-      <i class="fa-solid fa-robot"></i>
-      <h4>Chatbot Matemático</h4>
-      <p>Resolución guiada de modelos de parciales y ejercicios prácticos.</p>
-      <a href="#">Abrir</a>
-    </div>
-
-    <div class="card">
-      <i class="fa-solid fa-brain"></i>
-      <h4>Modelo Predictivo</h4>
-      <p>Predicción posterior al primer parcial sobre abandono y rendimiento final.</p>
-      <a href="#">Ver Análisis</a>
     </div>
 
   </div>
 </section>
 
-<section class="section" id="modelo">
-  <h3>Analítica Académica</h3>
-  <p style="text-align:center; max-width:850px; margin:auto; color:var(--gray);">
-    La plataforma integra modelos de Machine Learning que analizan rendimiento,
-    asistencia y participación para identificar tempranamente riesgo de deserción
-    y proyectar promedio final estimado.
-  </p>
-</section>
-
 <footer>
-    Plataforma académica diseñada y desarrollada por Isaias Tenorio
+  Plataforma académica diseñada y desarrollada por Isaias Tenorio
 </footer>
 
 </body>
