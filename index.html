@@ -3,9 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Análisis Matemático 1 | Plataforma Académica</title>
+<title>Análisis Matemático 1 | Cátedra: Vazquez Magnani | Docente: Isaias Tenorio</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 :root{
@@ -27,6 +28,7 @@ body{
   background:var(--light);
   color:var(--primary);
   line-height:1.6;
+  scroll-behavior:smooth;
 }
 
 header{
@@ -56,26 +58,28 @@ nav a:hover{
 }
 
 .hero{
-  padding:100px 40px;
+  padding:120px 40px;
   text-align:center;
   background:linear-gradient(135deg,#0f172a,#1e40af);
   color:white;
+  animation:fadeIn 1.2s ease-in-out;
 }
 
 .hero h2{
-  font-size:40px;
+  font-size:42px;
   margin-bottom:20px;
+  font-weight:700;
 }
 
 .hero p{
   font-size:18px;
-  max-width:700px;
-  margin:0 auto 30px auto;
+  max-width:750px;
+  margin:0 auto 35px auto;
   color:#cbd5e1;
 }
 
 .hero button{
-  padding:14px 30px;
+  padding:14px 32px;
   border:none;
   border-radius:8px;
   background:var(--accent);
@@ -87,64 +91,106 @@ nav a:hover{
 
 .hero button:hover{
   background:#1d4ed8;
+  transform:translateY(-2px);
 }
 
 .section{
-  padding:80px 40px;
+  padding:90px 40px;
   max-width:1200px;
   margin:auto;
 }
 
 .section h3{
   text-align:center;
-  font-size:28px;
-  margin-bottom:50px;
+  font-size:30px;
+  margin-bottom:60px;
 }
 
 .cards{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:30px;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:35px;
 }
 
 .card{
   background:white;
-  padding:30px;
-  border-radius:12px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.08);
-  transition:0.3s;
+  padding:35px;
+  border-radius:14px;
+  box-shadow:0 15px 40px rgba(0,0,0,0.07);
+  transition:0.4s;
+  opacity:0;
+  transform:translateY(20px);
+  animation:fadeUp 0.8s forwards;
 }
 
+.card:nth-child(1){animation-delay:0.1s;}
+.card:nth-child(2){animation-delay:0.2s;}
+.card:nth-child(3){animation-delay:0.3s;}
+.card:nth-child(4){animation-delay:0.4s;}
+.card:nth-child(5){animation-delay:0.5s;}
+
 .card:hover{
-  transform:translateY(-6px);
+  transform:translateY(-8px);
+}
+
+.card i{
+  font-size:28px;
+  margin-bottom:18px;
+  color:var(--accent);
 }
 
 .card h4{
-  margin-bottom:15px;
+  margin-bottom:12px;
+  font-size:18px;
 }
 
 .card p{
   font-size:14px;
   color:var(--gray);
-  margin-bottom:20px;
+  margin-bottom:22px;
 }
 
 .card a{
   display:inline-block;
-  padding:10px 18px;
+  padding:10px 20px;
   background:var(--accent);
   color:white;
   text-decoration:none;
   border-radius:6px;
   font-size:14px;
+  transition:0.3s;
+}
+
+.card a:hover{
+  background:#1d4ed8;
 }
 
 footer{
   background:var(--secondary);
   color:#cbd5e1;
   text-align:center;
-  padding:30px;
+  padding:35px;
   font-size:14px;
+}
+
+.creditos{
+  display:block;
+  margin-top:12px;
+  font-size:12px;
+  color:#94a3b8;
+  letter-spacing:0.5px;
+}
+
+@keyframes fadeIn{
+  from{opacity:0;}
+  to{opacity:1;}
+}
+
+@keyframes fadeUp{
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
 }
 </style>
 </head>
@@ -163,7 +209,8 @@ footer{
 <section class="hero">
   <h2>Plataforma Académica Inteligente</h2>
   <p>
-    Sistema integral para gestión académica, evaluaciones online y modelo predictivo de deserción basado en Machine Learning.
+    Sistema integral de gestión académica con evaluaciones online,
+    analítica educativa y modelo predictivo de deserción basado en Machine Learning.
   </p>
   <button onclick="window.location.href='#servicios'">
     Explorar Plataforma
@@ -176,30 +223,35 @@ footer{
   <div class="cards">
 
     <div class="card">
+      <i class="fa-solid fa-user-check"></i>
       <h4>Registro de Asistencia</h4>
-      <p>Control automatizado de asistencia con cálculo de porcentaje y alertas tempranas.</p>
+      <p>Control automatizado con cálculo de porcentaje y alertas tempranas.</p>
       <a href="#">Acceder</a>
     </div>
 
     <div class="card">
+      <i class="fa-solid fa-chart-line"></i>
       <h4>Control de Asistencia</h4>
       <p>Consulta individual de asistencias, ausencias y porcentaje acumulado.</p>
       <a href="#">Consultar</a>
     </div>
 
     <div class="card">
+      <i class="fa-solid fa-file-pen"></i>
       <h4>Parcialitos Online</h4>
       <p>Evaluaciones formativas con corrección automática y análisis de desempeño.</p>
       <a href="#">Ingresar</a>
     </div>
 
     <div class="card">
+      <i class="fa-solid fa-robot"></i>
       <h4>Chatbot Matemático</h4>
       <p>Resolución guiada de modelos de parciales y ejercicios prácticos.</p>
       <a href="#">Abrir</a>
     </div>
 
     <div class="card">
+      <i class="fa-solid fa-brain"></i>
       <h4>Modelo Predictivo</h4>
       <p>Predicción posterior al primer parcial sobre abandono y rendimiento final.</p>
       <a href="#">Ver Análisis</a>
@@ -210,7 +262,7 @@ footer{
 
 <section class="section" id="modelo">
   <h3>Analítica Académica</h3>
-  <p style="text-align:center; max-width:800px; margin:auto; color:var(--gray);">
+  <p style="text-align:center; max-width:850px; margin:auto; color:var(--gray);">
     La plataforma integra modelos de Machine Learning que analizan rendimiento,
     asistencia y participación para identificar tempranamente riesgo de deserción
     y proyectar promedio final estimado.
@@ -218,8 +270,12 @@ footer{
 </section>
 
 <footer>
-  ©  Cátedra Vázquez Magnani | Docente: Isaias Tenorio <br>
-  Plataforma desarrollada con Analítica Educativa e Inteligencia Artificial.
+  Cátedra: Vázquez Magnani | Análisis Matemático 1 <br><br>
+  Docente: Isaias Tenorio <br>
+  <span class="creditos">
+    Plataforma académica diseñada y desarrollada por Isaias Tenorio.
+  </span>
 </footer>
+
 </body>
 </html>
