@@ -1,168 +1,189 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>AM1 | Plataforma Académica</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>AM1 | Plataforma Académica</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-  <!-- Font Awesome Icons -->
- <link rel="stylesheet" 
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
-    }
+body {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: #f1f5f9;
+  overflow-x: hidden;
+}
 
-    body {
-      background: linear-gradient(135deg, #0f172a, #1e293b);
-      color: #f1f5f9;
-      overflow-x: hidden;
-    }
+header {
+  background: rgba(0,0,0,0.3);
+  backdrop-filter: blur(10px);
+  padding: 20px 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
 
-    header {
-      background: rgba(0,0,0,0.3);
-      backdrop-filter: blur(10px);
-      padding: 20px 10%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: fixed;
-      width: 100%;
-      top: 0;
-      z-index: 1000;
-    }
+header h1 {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
 
-    header h1 {
-      font-size: 20px;
-      font-weight: 600;
-      letter-spacing: 1px;
-    }
+header span {
+  font-size: 13px;
+  opacity: 0.8;
+}
 
-    header span {
-      font-size: 13px;
-      opacity: 0.8;
-    }
+.hero {
+  height: 50vh; /* Más compacto */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+  animation: fadeIn 1.5s ease;
+}
 
-    .hero {
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 0 20px;
-      animation: fadeIn 1.5s ease;
-    }
+.hero h2 {
+  font-size: 28px; /* Más pequeño */
+  margin-bottom: 10px;
+  font-weight: 700;
+}
 
-    .hero h2 {
-      font-size: 40px;
-      margin-bottom: 15px;
-      font-weight: 700;
-    }
+.hero p {
+  font-size: 16px;
+  max-width: 650px;
+  opacity: 0.85;
+  line-height: 1.5;
+}
 
-    .hero p {
-      font-size: 18px;
-      max-width: 700px;
-      opacity: 0.85;
-      line-height: 1.6;
-    }
+.hero button {
+  margin-top: 20px;
+  padding: 10px 22px;
+  border: none;
+  border-radius: 8px;
+  background: #38bdf8;
+  color: #0f172a;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
 
-    .signature {
-      margin-top: 20px;
-      font-size: 14px;
-      opacity: 0.7;
-      letter-spacing: 1px;
-    }
+.hero button:hover {
+  background: #0ea5e9;
+}
 
-    section {
-      padding: 80px 10%;
-    }
+section {
+  padding: 80px 10%;
+}
 
-    .section-title {
-      text-align: center;
-      font-size: 28px;
-      margin-bottom: 50px;
-      font-weight: 600;
-    }
+.section-title {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 50px;
+  font-weight: 600;
+}
 
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 30px;
-    }
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+  gap: 30px;
+}
 
-    .card {
-      background: rgba(255,255,255,0.05);
-      padding: 30px;
-      border-radius: 16px;
-      backdrop-filter: blur(15px);
-      transition: all 0.3s ease;
-      text-align: center;
-      cursor: pointer;
-    }
+.card {
+  background: rgba(255,255,255,0.05);
+  padding: 30px;
+  border-radius: 16px;
+  backdrop-filter: blur(15px);
+  transition: all 0.3s ease;
+  text-align: center;
+  cursor: pointer;
+}
 
-    .card:hover {
-      transform: translateY(-10px);
-      background: rgba(255,255,255,0.08);
-    }
+.card:hover {
+  transform: translateY(-10px);
+  background: rgba(255,255,255,0.08);
+}
 
-    .card i {
-      font-size: 30px;
-      margin-bottom: 15px;
-      color: #38bdf8;
-    }
+.card i {
+  font-size: 30px;
+  margin-bottom: 15px;
+  color: #38bdf8;
+}
 
-    .card h3 {
-      margin-bottom: 10px;
-      font-size: 18px;
-    }
+.card h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
 
-    .card p {
-      font-size: 14px;
-      opacity: 0.8;
-    }
+.card p {
+  font-size: 14px;
+  opacity: 0.8;
+}
 
-    footer {
-      text-align: center;
-      padding: 30px;
-      background: rgba(0,0,0,0.3);
-      font-size: 14px;
-      opacity: 0.7;
-    }
+/* Novedades / videos */
+.novedades {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+  gap: 20px;
+  margin-top: 50px;
+}
 
-    @keyframes fadeIn {
-      from {opacity: 0; transform: translateY(20px);}
-      to {opacity: 1; transform: translateY(0);}
-    }
+.novedad iframe {
+  width: 100%;
+  height: 200px;
+  border-radius: 12px;
+}
 
-  </style>
+footer {
+  text-align: center;
+  padding: 30px;
+  background: rgba(0,0,0,0.3);
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  <h1>Análisis Matemático I</h1>
-  <span>Plataforma Académica</span>
+  <h1>Análisis Matemático 1 - FCE - UBA</h1>
+  <span>Isaias Tenorio · Analítica e IA Educativa</span>
 </header>
 
 <section class="hero">
-  <h2>Cátedra Vázquez Magnani</h2>
+  <h2>Cátedra: Vázquez Magnani</h2>
   <p>
-    Plataforma integral para la gestión académica, seguimiento de desempeño,
-    evaluación continua y asistencia inteligente mediante herramientas
-    de análisis de datos e inteligencia artificial.
+    Plataforma integral para gestión académica, seguimiento de desempeño,
+    evaluaciones y asistencia inteligente mediante análisis de datos e IA.
   </p>
-  <div class="signature">
-    Diseño e implementación: Isaias Tenorio
-  </div>
+
+  <!-- Botón ingreso docentes -->
+  <button onclick="window.location.href='login_docentes.html'">
+    Ingreso Docentes
+  </button>
 </section>
 
 <section id="servicios">
@@ -189,11 +210,33 @@
     </div>
 
     <div class="card" onclick="window.location.href='#'">
+      <i class="fas fa-file-alt"></i>
+      <h3>Control de Notas</h3>
+      <p>Registro y análisis de notas parciales y finales.</p>
+    </div>
+
+    <div class="card" onclick="window.location.href='#'">
+      <i class="fas fa-chart-pie"></i>
+      <h3>Avance del Alumno</h3>
+      <p>Visualización personalizada del progreso con gráficos y métricas.</p>
+    </div>
+
+    <div class="card" onclick="window.location.href='#'">
       <i class="fas fa-robot"></i>
       <h3>Chatbot Académico</h3>
       <p>Modelos de parciales, resoluciones guiadas y parcialitos interactivos.</p>
     </div>
 
+  </div>
+
+  <!-- Sección de novedades / videos -->
+  <div class="novedades">
+    <div class="novedad">
+      <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" title="Novedad 1" allowfullscreen></iframe>
+    </div>
+    <div class="novedad">
+      <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" title="Novedad 2" allowfullscreen></iframe>
+    </div>
   </div>
 </section>
 
